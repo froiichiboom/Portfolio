@@ -583,7 +583,7 @@ section{
 
 .contact-container{
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 0.9fr 1.1fr;
     gap: 6rem;
     max-width: 100rem;
     margin: 0 auto;
@@ -605,9 +605,9 @@ section{
 }
 
 .contact-detail i{
+    width: 2.2rem;
     color: var(--accent);
     font-size: 1.6rem;
-    width: 2.2rem;
 }
 
 .contact-form{
@@ -657,4 +657,64 @@ footer{
     border-top: 1px solid var(--line);
     color: var(--muted);
     font-size: 1.3rem;
+}
+
+/* ---------- Resume download ---------- */
+
+.resume-download{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.8rem 1.6rem;
+    align-items: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, var(--surface), rgba(34, 197, 94, 0.08));
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+}
+
+.resume-download > i{
+    grid-row: span 2;
+    color: var(--accent);
+    font-size: 3.6rem;
+}
+
+.resume-download h3{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.resume-download p{
+    color: var(--muted);
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.resume-download .btn{
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 1rem;
+    white-space: nowrap;
+}
+
+@media(max-width:995px){
+    .contact-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+@media(max-width:600px){
+    .resume-download{
+        grid-template-columns: 1fr;
+        padding: 2.4rem;
+    }
+
+    .resume-download > i{
+        grid-row: auto;
+    }
+
+    .resume-download .btn{
+        grid-column: 1;
+    }
 }
